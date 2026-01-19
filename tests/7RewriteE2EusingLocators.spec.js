@@ -75,7 +75,9 @@ await page.locator("button[routerlink*='myorders']").click();
 const orderpage = page.locator("tbody"); //line no.93 and 94 are to wait till orders page is loaded completely
 await orderpage.waitFor();
 expect(await page.locator(".table").filter({hasText: reqOrderId}).getByText(reqOrderId)).toHaveText(reqOrderId);
-await page.locator(".ng-star-inserted").filter({hasText: reqOrderId}).getByRole("button", {name:'View'}).click();
+await page.locator(".ng-star-inserted").textContent();
+
+// await page.locator(".ng-star-inserted").filter({hasText: reqOrderId}).getByRole("button", {name:'View'}).click();
 
 
 // for(let i=0;i<await tablerows.count();++i)

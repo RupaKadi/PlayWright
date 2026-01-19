@@ -48,7 +48,6 @@ test.only('API Testing using Playwright to place the order', async ({page})=>
 
     await page.goto("https://rahulshettyacademy.com/client/#/auth/login");   
 
-
    const productName = page.locator('.card-body b');
    const products = page.locator(".card-body");
    const product = "ZARA COAT 3";
