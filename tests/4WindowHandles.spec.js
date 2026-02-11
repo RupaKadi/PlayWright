@@ -24,7 +24,7 @@ console.log(text);
 console.log(domainName);
 
 await page.locator("#username").fill(domainName);
-console.log(await page.locator("#username").inputValue());
+console.log(await page.locator("#username").inputValue()); //use .inputValue() if we are filling value dynamically later
 
 //If 2 new pages are opening then,
 const [newPage1, newPage2]=await Promise.all([

@@ -3,13 +3,25 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "test": "npx playwright test tests/11WebAPI.spec.js --headed",
+    "regression": "npx playwright test",
+    "webTests": "npx playwright test --grep '@API'",
+    "chrome execution": "npx playwright test --config playwright.config1.js --project=chrome",
+    "cucumberRegression": "npx cucumber-js --tags 'Regression' --retry 1 --exit --format html:cucumber-report.html"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "type": "commonjs",
   "devDependencies": {
+    "@cucumber/cucumber": "^12.6.0",
     "@playwright/test": "^1.57.0",
-    "@types/node": "^25.0.3"
+    "@types/node": "^25.0.3",
+    "allure-playwright": "^3.4.5",
+    "typescript": "^5.9.3"
+  },
+  "dependencies": {
+    "exceljs": "^4.4.0"
   }
 }

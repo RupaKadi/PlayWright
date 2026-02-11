@@ -32,12 +32,12 @@ await signin.click();
 await expect(page.locator("[style*='block']")).toContainText('Incorrect');
 
 // to clear existing content and giving other input
-await userName.fill("");
+//await userName.fill("");
 await userName.fill("rahulshettyacademy");
 await signin.click();
 
 // here css---As .card-body is classname in parent and 'a' is tagname of child. If we want to fetch first element we can use either .first() or .nth(0)
-console.log(await cardTitles.nth(0).textContent()); 
+console.log(await cardTitles.nth(0).textContent());
 
 // To get second element 
 console.log(await cardTitles.nth(1).textContent());
